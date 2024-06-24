@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/test" :class="['service-item', `service-item--${color}`]">
+  <router-link to="#" :class="['service-item', `service-item--${color}`]">
     <div class="service-item__text-content">
       <h3 class="service-item__title">{{ title }}</h3>
       <h4 class="service-item__subtitle">{{ subtitle }}</h4>

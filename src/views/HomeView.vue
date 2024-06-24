@@ -1,7 +1,7 @@
 <template>
-  <main class="container">
-    <h1 class="headline text-center spacing-vertical--lg">Leistungen</h1>
-    <section class="services">
+  <main>
+    <section class="services container">
+      <h1 class="services__headline spacing-vertical--lg container">Leistungen</h1>
       <swiper
         space-between="16"
         slides-per-view="1.2"
@@ -42,6 +42,9 @@
         </swiper-slide>
       </swiper>
     </section>
+    <section>
+      <ContactForm />
+    </section>
   </main>
 </template>
 
@@ -49,6 +52,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/swiper-bundle.css'
 import ServiceItem from '@/components/ServiceItem.vue'
+import ContactForm from '@/components/ContactForm.vue'
 
 const breakpoints = {
   768: {
@@ -58,6 +62,29 @@ const breakpoints = {
 </script>
 
 <style scoped>
+.services {
+  --services-section-margin-bottom: 2rem;
+  --service-headline-padding: 2rem 0;
+  --service-headline-text-align: left;
+  --service-headline-font-size: 1.5rem;
+
+  margin-bottom: var(--services-section-margin-bottom);
+}
+@media screen and (min-width: 768px) {
+  .services {
+    --service-headline-text-align: center;
+    --service-headline-padding: 2rem 0;
+    --services-section-margin-bottom: 5rem;
+    --service-headline-font-size: 3rem;
+  }
+}
+
+.services__headline {
+  font-size: var(--service-headline-font-size);
+  text-align: var(--service-headline-text-align);
+  padding: var(--service-headline-padding);
+  font-weight: 800;
+}
 .swiper-slide {
   height: auto;
 }

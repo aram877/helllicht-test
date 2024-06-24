@@ -1,8 +1,8 @@
 <template>
   <footer id="footer" class="spacing-vertical--lg">
     <div class="container footer__content">
-      <router-link to="/datenschutz" class="link"> Datenschutz </router-link>
-      <router-link to="/impressum" class="link"> Impressum </router-link>
+      <router-link to="/data-privacy" class="link"> Datenschutz </router-link>
+      <router-link to="/imprint" class="link"> Impressum </router-link>
     </div>
   </footer>
 </template>
