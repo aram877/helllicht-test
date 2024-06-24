@@ -1,6 +1,6 @@
 <template>
   <router-link to="/test" :class="['service-item', `service-item--${color}`]">
-    <div class="service-item__text-content space-y-4">
+    <div class="service-item__text-content">
       <h3 class="service-item__title">{{ title }}</h3>
       <h4 class="service-item__subtitle">{{ subtitle }}</h4>
       <p class="service-item__description">{{ description }}</p>
@@ -42,13 +42,28 @@ defineProps({
 
 <style scoped>
 .service-item {
-  padding: 3.5rem;
+  --service-item-padding: 1rem;
+  --service-item-title-font-size: 1.5rem;
+  --service-item-subtitle-font-size: 0.8rem;
+  --service-item-text-content-spacing: 2rem;
+
+  height: 100%;
+  padding: var(--service-item-padding);
   color: var(--white);
   transition: transform 0.3s;
   transition: box-shadow 0.125s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .service-item {
+    --service-item-padding: 3.5rem;
+    --service-item-title-font-size: 2rem;
+    --service-item-subtitle-font-size: 1rem;
+    --service-item-text-content-spacing: 3rem;
+  }
 }
 
 .service-item:hover {
@@ -70,19 +85,19 @@ defineProps({
 }
 
 .service-item__title {
-  font-size: 2rem;
+  font-size: var(--service-item-title-font-size);
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
 .service-item__subtitle {
-  font-size: 1rem;
+  font-size: var(--service-item-subtitle-font-size);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .service-item__description {
-  font-size: 1rem;
+  font-size: var(--service-item-subtitle-font-size);
   font-weight: 400;
   margin-bottom: 1.5rem;
   line-height: 1.5rem;
@@ -115,6 +130,10 @@ defineProps({
   height: 1.5rem;
   width: 1.5rem;
   transition: transform 0.125s ease-in-out;
+}
+
+.service-item__text-content > * + * {
+  margin-top: var(--service-item-text-content-spacing);
 }
 
 .service-item:hover .service-item__link-icon {

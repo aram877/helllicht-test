@@ -1,4 +1,5 @@
 import './assets/styles/main.css'
+import 'swiper/swiper-bundle.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
