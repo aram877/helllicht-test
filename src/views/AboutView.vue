@@ -4,7 +4,4 @@
   </div>
 </template>
 
-<style>
-.about {
-}
-</style>
+<style></style>

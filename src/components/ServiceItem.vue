@@ -99,9 +99,16 @@ defineProps({
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  display: inline-block;
+}
 
-  transition: all 0.125s ease-in-out;
+.service-item__link-text::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: var(--white);
+  transition: 300ms;
 }
 
 .service-item__link-icon {
@@ -118,7 +125,12 @@ defineProps({
   color: var(--black);
 }
 
-.service-item:hover .service-item__link-text {
-  border-bottom: 1px solid var(--white);
+.service-item:hover .service-item__link-text::after {
+  width: 100%;
+}
+
+.service-item--white:hover .service-item__link-text::after {
+  width: 100%;
+  background-color: var(--black);
 }
 </style>
