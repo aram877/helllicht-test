@@ -7,7 +7,38 @@
 @media screen and (min-width: 768px) {
   .container {
     padding: 0 30px;
-
     max-width: 76.25rem;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.spacing-vertical {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.spacing-horizontal {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.spacing-vertical--lg {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.spacing-horizontal--lg {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.spacing-top--lg {
+  padding-top: 4rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 3rem;
 }
