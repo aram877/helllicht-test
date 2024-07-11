@@ -91,7 +91,7 @@ onMounted(async () => {
 
   countries.value = data
     .filter((country) => country.region === 'Europe')
-    .map((country) => country.name.common)
+    .map((country) => country.translations.deu.common)
 })
 
 const schema = yup.object().shape({
