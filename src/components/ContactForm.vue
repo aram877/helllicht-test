@@ -116,7 +116,7 @@ const onSubmit = async () => {
       { abortEarly: false }
     )
     errors.value = {}
-    alert('Form successfully submitted!')
+    alert('Nachricht wurde erfolgreich gesendet')
   } catch (err) {
     const errorMessages = {}
     err.inner.forEach((error) => {
